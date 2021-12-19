@@ -1,0 +1,22 @@
+.comment__wrap {
+  display: flex;
+  padding: 20px 0;
+}
+
+.comment__content-wrap {
+  width: 100%;
+}
+
+.comment__header {
+  display: flex;
+  align-items: self-end;
+  margin-bottom: 16px;
+
+  .title {
+    margin-right: 8px;
+  }
+}
+
+.comment__text {
+  padding-bottom: 22px;
+}

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+html,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.36;
+  color: #131831;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.app__container {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 10px 88px;
+  border: 1px solid #E2E9F3;
+}
+
+.btn--activities {
+  margin-right: 24px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.22;
+  color: #697082;
+
+  &:hover {
+    color: #131831;
+    cursor: pointer;
+  }
+}
+
+.btn--send {
+  width: 168px;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  color: #ffffff;
+  background: #3EBF8A;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #131831;
+  }
+
+  &:disabled {
+    background-color: #929BAD;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sub__text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.22;
+  color: #697082;
+}
+
+.avatar {
+  margin-right: 32px;
+  border-radius: 8px;
+  border: 1px solid #CDD7E5;
+  overflow: hidden;
+
+  &--comment {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+  }
+
+  &--reply {
+    width: 88px;
+    min-width: 88px;
+    height: 88px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form--reply {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+
+  button {
+    margin: 0;
+  }
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  border: 1px solid #CDD7E5;
+  border-radius: 4px;
+  background: #FCFDFF;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1.27;
+  color: #929BAD;
+}
