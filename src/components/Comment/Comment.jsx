@@ -46,6 +46,7 @@ export const Comment = (props) => {
               <h3 className='title'>{name}</h3>
               <span className='sub__text'>{date}</span>
             </div>
+
             <p className='comment__text'>{body}</p>
             <div className='comment__activities'>
               <button className='btn--activities' onClick={editComment}>Edit</button>

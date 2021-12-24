@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import faker from 'faker';
-import {fetchCreateReply, fetchEditComment, fetchEditReply} from '../../store/comments/operations.js';
+import {fetchCreateReply, fetchEditComment} from '../../store/comments/operations.js';
 import {useDispatch} from "react-redux";
 
-export const EditBox = ({isEditComment = false, isEditReply = false, commentId, name, avatar, commentOwner, closeEditBox, body}) => {
+export const EditBox = ({isEditComment = false, commentId, name, avatar, commentOwner, closeEditBox, body}) => {
   const dispatch = useDispatch();
   const [commentText, setCommentText] = useState(body);
 
@@ -23,14 +23,6 @@ export const EditBox = ({isEditComment = false, isEditReply = false, commentId, 
         avatar: avatar
       };
       dispatch(fetchEditComment(data, commentId))
-    } else if (isEditReply) {
-      const data = {
-        name: name,
-        body: commentText,
-        date: new Date().toLocaleDateString(),
-        avatar: avatar,
-      };
-      dispatch(fetchEditReply(data, commentId));
     } else {
       const data = {
         name: faker.name.findName(),
@@ -40,7 +32,6 @@ export const EditBox = ({isEditComment = false, isEditReply = false, commentId, 
       };
       dispatch(fetchCreateReply(data, commentId));
     }
-
     closeEditBox();
   };
 
@@ -48,7 +39,7 @@ export const EditBox = ({isEditComment = false, isEditReply = false, commentId, 
       <div className='editBox__wrap'>
         <div className='editBox__form-wrap'>
           <div className='form--reply'>
-            {!(isEditComment || isEditReply) ? (<span className='sub__text'>{`to ${commentOwner}`}</span>) : null}
+            {!isEditComment ? (<span className='sub__text'>{`to ${commentOwner}`}</span>) : null}
             <button className='btn--activities' onClick={closeEditBox}>Cancel</button>
           </div>
           <form className='form'>
