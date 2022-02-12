@@ -27,6 +27,13 @@
       "date": "24.12.2021",
       "avatar": "http://placeimg.com/120/120/people",
       "id": 5
+    },
+    {
+      "name": "Miriam Predovic",
+      "body": "Новый комментарий",
+      "date": "24.12.2021",
+      "avatar": "http://placeimg.com/120/120/sports",
+      "id": 6
     }
   ],
   "replies": [
